@@ -1,0 +1,38 @@
+#include<stdio.h>
+main()
+{
+	int a,j;
+	scanf("%d",&a);
+	if(a>=1&&a<=100)
+	{
+		if(a<6)
+			printf("no");
+		else 
+		{
+			printf("6");
+			for(int i=9;i<=a;i++)
+			{
+				if(i%3==0)
+				{
+					printf("\n%d",i);
+					continue;
+				}
+				if((i-20)%3==0&&i!=23&&i-20>0)
+				{
+					printf("\n%d",i);
+					continue;
+				}
+				if((i-40)%3==0&&i!=43&&i-40>0)
+				{
+					printf("\n%d",i);
+					continue;
+				}
+				if(i%20==0)
+				{
+					printf("\n%d",i);
+					continue;
+				}
+			}
+		}
+	}
+}

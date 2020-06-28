@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+main()
+{
+	int x,y,z,c=0;
+	cin>>x>>y>>z;
+	while(x!=1||y!=1||z!=1)
+	{
+		if(x>=y&&x>=z)
+		{
+			c++;
+			x/=2;
+			continue;
+		}
+		if(y>=x&&y>=z)
+		{
+			c++;
+			y/=2;
+			continue;
+		}
+		if(z>=x&&z>=y)
+		{
+			c++;
+			z/=2;
+			continue;
+		}
+	}
+	cout<<c;
+}

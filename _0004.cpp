@@ -1,0 +1,74 @@
+#include"stdio.h"
+#include"string.h"
+main()
+{
+	int i=0,g=0,m,ffh;
+	char b[10000],a[10000];
+	scanf("%s",a);
+	while(i<10000)
+	{
+		if(a[i]==0)
+			{
+			break;
+			}
+		else
+		{
+			if((65<=a[i])&&(a[i]<=90))
+			{
+				b[i]='1';
+			}
+			else
+			{	
+				if((97<=a[i])&&(a[i]<=122))
+				{
+					b[i]='0';
+				}
+			}
+		}
+		i++;
+	}
+	if(b[0]=='0')
+	{
+		for(i=0;i<10000;i++)
+		{
+			if(a[i]==0)
+			{
+				break;
+			}
+			else
+			{
+				if(b[i]=='1')
+					g=1;
+			}
+		}
+		if(g==1)
+			printf("Mix");
+		else
+			printf("All Small Letter");
+	}	
+	else
+	{
+		if(b[0]='1')
+		{
+			for(i=0;i<10000;i++)
+			{
+				if(a[i]==0)
+				{
+					break;
+				}
+				else
+				{
+					if(b[i]=='1')
+						m=1;
+					else
+						g=1;
+				}
+			}
+			if(g==1)
+				printf("Mix");
+			else
+				printf("All Capital Letter");
+		}
+	}
+ return 0;
+}

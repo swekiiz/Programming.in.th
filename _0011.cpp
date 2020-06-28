@@ -1,0 +1,36 @@
+#include"stdio.h"
+main()
+{
+	int p,i,n,a[10],b[10],c[10],d;
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+		b[i]=a[i]%42;
+	}
+	i=0;d=0;p=0;
+	while(i<10)
+	{
+		if(i!=0)
+		{
+			for(n=0;n<d;n++)
+			{
+				if(b[i]==c[n])
+					p=1;
+			}
+		}
+		if(p==0)
+		{
+			for(n=i+1;n<10;n++)
+			{
+				if(b[i]==b[n])
+				{
+					c[d]=b[i];
+					d++;
+				}
+			}
+		}
+		i++;p=0;
+	}
+	printf("%d",10-d);
+	return 0;
+}

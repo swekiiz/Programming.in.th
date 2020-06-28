@@ -1,0 +1,41 @@
+#include"stdio.h"
+main()
+{
+	int a,b,c,g;
+	scanf("%d",&a);
+	scanf("%d",&b);
+	scanf("%d",&c);
+	g=a+b+c;
+	if(g>=80)
+		printf("A");
+	else 
+	{
+	if(g>=75)
+		printf("B+");
+	else 
+	{
+	if(g>=70)
+		printf("B");
+	else 
+	{
+	if(g>=65)
+		printf("C+");
+	else 
+	{
+	if(g>=60)
+		printf("C");
+	else 
+	{
+	if(g>=55)
+		printf("D+");
+	else 
+	{
+	if(g>=50)
+		printf("D");
+	else 
+	{
+	if(g>=0)
+		printf("F");
+	}}}}}}}
+	return 0;
+}
